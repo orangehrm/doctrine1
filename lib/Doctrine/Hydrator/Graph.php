@@ -312,10 +312,6 @@ abstract class Doctrine_Hydrator_Graph extends Doctrine_Hydrator_Abstract
                 $fieldName = $table->getFieldName($last);
                 $cache[$key]['fieldName'] = $fieldName;
 
-                if (isset($this->_queryComponents[$cache[$key]['dqlAlias']]['agg_field'][$last])) {
-                    $fieldName = $this->_queryComponents[$cache[$key]['dqlAlias']]['agg_field'][$last];
-                }
-
                 if ($table->isIdentifier($fieldName)) {
                     $cache[$key]['isIdentifier'] = true;
                 } else {
